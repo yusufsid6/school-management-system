@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #1f2937;
+  --color-primary: #2563eb;
+  --color-secondary: #6366f1;
+  --color-accent: #ec4899;
+  --radius: 0.5rem;
+}
+
+* {
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-gray-100 text-foreground;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+a {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+button {
+  @apply transition-colors;
+}
+
+input,
+textarea,
+select {
+  @apply transition-colors;
+}
+
+/* Utility classes */
+.glass {
+  @apply backdrop-blur-md bg-white/30;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
